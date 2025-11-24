@@ -6,7 +6,25 @@
 ```
 wget https://raw.githubusercontent.com/wxfyes/cf-up-dome/refs/heads/main/install_cf_multi_update.sh && chmod +x install_cf_multi_update.sh && ./install_cf_multi_update.sh
 ```
+2.按提示输入：
 
+Cloudflare API Token
+
+3.顶级域名（如 xxx.com）
+
+b.xxx.com
+
+c.xxx.com
+
+4.更新间隔
+
+5.是否启用邮件通知 + 邮箱信息
+
+6.是否启用 Telegram 通知 + Bot Token + Chat ID
+
+每次 IP 更新，会自动更新 DNS、邮件/TG通知，并记录历史与变动次数
+
+这样你就拥有了一个 全自动、带历史和通知的 b.xxx.com IP 更新系统 ✅
 按提示填写 Cloudflare API Token、是否启用邮件/TG、并在编辑器中维护 /etc/cf_domain_map.conf（每行一对 <源> <目标>）。
 
 安装完成后，crontab 会每 INTERVAL 分钟运行 /usr/local/bin/cf_multi_update.sh。
@@ -16,6 +34,7 @@ wget https://raw.githubusercontent.com/wxfyes/cf-up-dome/refs/heads/main/install
 ```
 wget https://raw.githubusercontent.com/wxfyes/cf-up-dome/refs/heads/main/uninstall_cf_update.sh && chmod +x uninstall_cf_update.sh && ./uninstall_cf_update.sh
 ```
+# 获取CF令牌
 1️⃣ 登录 Cloudflare
 
 打开 Cloudflare 登录页面
