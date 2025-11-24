@@ -16,4 +16,42 @@ wget https://raw.githubusercontent.com/wxfyes/cf-up-dome/refs/heads/main/install
 ```
 wget https://raw.githubusercontent.com/wxfyes/cf-up-dome/refs/heads/main/uninstall_cf_update.sh && chmod +x uninstall_cf_update.sh && ./uninstall_cf_update.sh
 ```
+1️⃣ 登录 Cloudflare
 
+打开 Cloudflare 登录页面
+
+使用你的账户登录
+
+2️⃣ 进入“我的个人资料”
+
+点击右上角头像 → My Profile（我的个人资料）
+
+在左侧菜单找到 API Tokens（API 令牌）
+
+3️⃣ 创建 API Token
+
+点击 Create Token（创建令牌）
+
+Cloudflare 提供模板，你可以选择 Edit DNS 模板
+
+这个模板允许你修改指定域名的 DNS 记录，非常适合你的需求
+
+修改权限：
+
+Zone → DNS → Edit（必须）
+
+Zone → Zone → Read（可选，便于获取 zone ID）
+
+指定域名：
+
+可以设置为 Include → Specific Zone → 填写你的域名（如 xxx.com）
+
+点击 Continue to summary → Create Token
+
+4️⃣ 保存 API Token
+
+创建成功后，会显示一个长字符串，这就是你的 API Token
+
+注意：这是唯一一次可以看到完整令牌，请务必复制并妥善保存
+
+这个令牌就是脚本中要求填写的 CF_API_TOKEN
