@@ -1,4 +1,4 @@
-使用步骤（简短）
+# 使用步骤（简短）
 
 将上面脚本保存为 install_cf_multi_update.sh（或你喜欢的名字）。
 
@@ -13,3 +13,7 @@ sudo ./install_cf_multi_update.sh
 安装完成后，crontab 会每 INTERVAL 分钟运行 /usr/local/bin/cf_multi_update.sh。
 
 查看日志：/var/log/cf_multi_update.log，历史记录保存在 /var/log/cf_update_history.log。
+# 一键卸载脚本执行命令
+chmod +x uninstall_cf_update.sh
+sudo ./uninstall_cf_update.sh
+
